@@ -174,7 +174,8 @@ Azure.
 комбинацию Anycast и CDN (Content Delivery Network).
 
 ## 5. Логическая схема БД
-![Untitled](https://github.com/khristina455/StackOverflowHighload/assets/91967143/e2daa2c4-1b5f-4c46-bcd7-08d80fcf7970)
+
+![Untitled(1)](https://github.com/khristina455/StackOverflowHighload/assets/91967143/44138fa1-960d-4cc6-b7b1-5ef84b160cd7)
 
 
 ## 6. Физическая схема БД
