@@ -277,7 +277,7 @@ Azure.
 | ----------- | ------------- | ------- |
 | id          | int           | 4 Б     |
 | user_id     | int           | 4 Б     |
-| question_id | int[N]        | N * 4 Б |
+| question_id | int           | 4 Б |
 | created_at  | timestamp     | 4 Б     |
 
 Историю просмотров будем хранить только для зарегистрированных пользователей в ClickHouse. 
