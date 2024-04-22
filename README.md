@@ -202,9 +202,17 @@ media    | S3
 | Таблица  | Поле        |
 | -------- | ----------- |
 | User     | id          |
+| Question | id          |
 | Question | user_id     |
 | Answer   | question_id |
-| Session  | token       |
+| Answer   | user_id     |
+| Session  | user_id     |
+| Img      | id          |
+| QuestionLike | question_id|
+| QuestionView | question_id|
+| AnswerLike | answer_id|
+| QuestionComment | question_id|
+| AnswerComment | answer_id|
 
 ### Шардинг
 | Таблица  | Тип          |
