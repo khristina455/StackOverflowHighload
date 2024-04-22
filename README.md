@@ -184,7 +184,7 @@ Azure.
 
 ## 5. Логическая схема БД
 
-![Untitled(2)](https://github.com/khristina455/StackOverflowHighload/assets/91967143/21be0f01-beed-47d9-bf75-60a5eef4963a)
+![Untitled(3)](https://github.com/khristina455/StackOverflowHighload/assets/91967143/7e24c772-daa9-4847-93b6-b48a9c47f60e)
 
 ## 6. Физическая схема БД
 
