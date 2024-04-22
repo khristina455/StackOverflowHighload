@@ -195,7 +195,7 @@ user_session   | redis |
 user, question, answer, question_comment, answer_comment, question_like, answer_like, question_view, img | PostgreSQL |
 question_like_user, answer_like_user, question_view_user | ClickHouse |
 question_search | ElasticSearch |
-media    | S3
+media    | S3 |
 
 
 ### Индексы
@@ -206,7 +206,6 @@ media    | S3
 | Question | user_id     |
 | Answer   | question_id |
 | Answer   | user_id     |
-| Session  | user_id     |
 | Img      | id          |
 | QuestionLike | question_id|
 | QuestionView | question_id|
@@ -215,12 +214,19 @@ media    | S3
 | AnswerComment | answer_id|
 
 ### Шардинг
-| Таблица  | Тип          |
+| Таблица  | Поле          |
 | -------  | ------------ |
-| User     | master-slave |
-| Question | master-slave |
-| Answer   | master-slave |
-| Comment  | master-slave |
+| User     | id           |
+| Question | user_id      |
+| Answer   | question_id  |
+| QuestionComment  | quetion_id |
+| AnswerComment  | answer_id |
+
 
 ## 7. Алгоритмы
 
+Добавление системы обраной связи (отправки жалоб). Некоторые вопросы, ответы или комментарии могут содержать запрещенный контент или оскорблять других пользователей. После получения жалобы модераторы проверят контент.
+
+На основе просмотренных вопросов на главной странице можно предлагать пользователю (зарегестрированному) вопросы, которые ему могут быть интересны. Для не зарегестрированных пользователей будем выдавать вопросы отсортированные по дате создания.
+
+Для поиска можно использовать Elasticsearch. Он позволяет использовать поиск по документам. Будем хранить индекс со свойставми "title" и "message". Используем анализаторы lowercase и snowball. Будем использовать нечеткий поиск с установленным расстоянием по Левинштейну auto.
